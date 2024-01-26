@@ -72,6 +72,7 @@
         //     System.Console.WriteLine("2: Reservar habitaciones");
         //     System.Console.WriteLine("3: Modificar o borrar reserva");
         //     System.Console.WriteLine("4: Cerrar programa");
+        //     System.Console.WriteLine();
         //     System.Console.Write("Tu eleccion: ");
         //     userSelect = Convert.ToInt32(Console.ReadLine());
 
@@ -89,6 +90,9 @@
         //                         }
         //                     }
         //                 }
+        //             System.Console.WriteLine();
+        //             System.Console.WriteLine("Pulsa enter para continuar...");
+        //             Console.ReadLine();
         //             break;
         //         case 2:
         //             System.Console.WriteLine("Que habitacion quieres reservar:");
@@ -115,7 +119,9 @@
         //                     }
         //                 }
         //             }
-
+        //             System.Console.WriteLine();
+        //             System.Console.WriteLine("Pulsa enter para continuar...");
+        //             Console.ReadLine();
         //             break;
         //         case 3:
         //             System.Console.WriteLine("Que reserva quieres borrar:");
@@ -142,6 +148,12 @@
         //                     }
         //                 }
         //             }
+        //             System.Console.WriteLine("Quieres cambiar la reserva a otra habitacion? (S/N)");
+        //             string userModify = Console.ReadLine();
+        //             if (userModify != "N")
+        //             {
+        //                 goto case 2;
+        //             }
         //             break;
         //         case 4:
         //             System.Console.WriteLine("Cerrando programa...");
@@ -150,6 +162,7 @@
         //             System.Console.WriteLine("No has introducido ningun numero valido!");
         //             break;
         //     }
+        //     System.Console.WriteLine();
         // } while (userSelect != 4);
         
     
@@ -169,38 +182,55 @@
         // sección específica. Codifica un programa en C# que calcule el total de ventas y
         // muestre el total de ventas por sección (Cada línea es una sección).
 
-        int totalVentas = 0;
+        // int totalVentas = 0;
 
-        for (int i = 0; i < ventas.GetLength(0); i++)
-        {
-            int totalSec = 0;
+        // for (int i = 0; i < ventas.GetLength(0); i++)
+        // {
+        //     int totalSec = 0;
             
-            for (int j = 0; j < ventas.GetLength(1); j++)
-            {
-                totalSec += ventas[i,j];
-                totalVentas += ventas[i,j];
-            }
+        //     for (int j = 0; j < ventas.GetLength(1); j++)
+        //     {
+        //         totalSec += ventas[i,j];
+        //         totalVentas += ventas[i,j];
+        //     }
 
-            Console.WriteLine($"VENTAS SECCION {i}: {totalSec}");
-        }
-        Console.WriteLine($"TOTAL VENTAS: {totalVentas}");
+        //     Console.WriteLine($"VENTAS SECCION {i}: {totalSec}");
+        // }
+        // Console.WriteLine($"TOTAL VENTAS: {totalVentas}");
 
         // 4. En un colegio, se lleva un registro de la asistencia de los estudiantes en diferentes
         // clases a lo largo de la semana. La información se presenta en una matriz de la
         // siguiente manera:
 
-        // bool[,] asistencia = {
-        // { true, false, true, true, false },
-        // { true, true, true, true, true },
-        // { false, false, true, true, false },
-        // { true, true, true, false, true },
-        // { true, false, true, false, true }
-        // };
+        bool[,] asistencia = {
+        { true, false, true, true, false },
+        { true, true, true, true, true },
+        { false, false, true, true, false },
+        { true, true, true, false, true },
+        { true, false, true, false, true }
+        };
 
         // Donde true indica que el estudiante asistió a la clase y false indica que el estudiante
         // no asistió. Codifica un programa en C# que permita al usuario ingresar el número de
         // estudiante y el día de la semana, y el programa debe mostrar si el estudiante asistió o
         // no a esa clase.
+
+        int userNum, weekDay;
+
+        System.Console.Write("Numero del estudiante: ");
+        userNum = Convert.ToInt32(Console.ReadLine());
+        
+        System.Console.Write("Numero del dia de la semana: ");
+        weekDay = Convert.ToInt32(Console.ReadLine());
+
+        if (asistencia[userNum - 1, weekDay - 1])
+        {
+            Console.WriteLine("El alumno asistio a clase");
+        }
+        else
+        {
+            Console.WriteLine("El alumno NO asistio a clase");
+        }
 
         // 5. Explica el funcionamiento de este programa:
 

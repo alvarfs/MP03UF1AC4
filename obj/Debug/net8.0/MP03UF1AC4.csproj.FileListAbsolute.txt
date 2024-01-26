@@ -12,3 +12,4 @@ C:\Users\alvar\Desktop\DAW\PROGRAMACION\PRACTICAS\MP03UF1AC4\obj\Debug\net8.0\re
 C:\Users\alvar\Desktop\DAW\PROGRAMACION\PRACTICAS\MP03UF1AC4\obj\Debug\net8.0\MP03UF1AC4.pdb
 C:\Users\alvar\Desktop\DAW\PROGRAMACION\PRACTICAS\MP03UF1AC4\obj\Debug\net8.0\MP03UF1AC4.genruntimeconfig.cache
 C:\Users\alvar\Desktop\DAW\PROGRAMACION\PRACTICAS\MP03UF1AC4\obj\Debug\net8.0\ref\MP03UF1AC4.dll
+C:\Users\alvar\Desktop\DAW\PROGRAMACION\PRACTICAS\MP03UF1AC4\obj\Debug\net8.0\MP03UF1AC4.sourcelink.json
