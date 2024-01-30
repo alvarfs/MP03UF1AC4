@@ -215,48 +215,54 @@
         // estudiante y el día de la semana, y el programa debe mostrar si el estudiante asistió o
         // no a esa clase.
 
-        int userNum, weekDay;
+        // int userNum, weekDay;
 
-        System.Console.Write("Numero del estudiante: ");
-        userNum = Convert.ToInt32(Console.ReadLine());
+        // System.Console.Write("Numero del estudiante: ");
+        // userNum = Convert.ToInt32(Console.ReadLine());
         
-        System.Console.Write("Numero del dia de la semana: ");
-        weekDay = Convert.ToInt32(Console.ReadLine());
+        // System.Console.Write("Numero del dia de la semana: ");
+        // weekDay = Convert.ToInt32(Console.ReadLine());
 
-        if (asistencia[userNum - 1, weekDay - 1])
-        {
-            Console.WriteLine("El alumno asistio a clase");
-        }
-        else
-        {
-            Console.WriteLine("El alumno NO asistio a clase");
-        }
+        // if (asistencia[userNum - 1, weekDay - 1])
+        // {
+        //     Console.WriteLine("El alumno asistio a clase");
+        // }
+        // else
+        // {
+        //     Console.WriteLine("El alumno NO asistio a clase");
+        // }
 
         // 5. Explica el funcionamiento de este programa:
 
-        // int[][] matriz = {
-        //     new int[] { 1, 1, 1 },
-        //     new int[] { 1},
-        //     new int[] { 1, 1, 2 }
-        // };
-        // for (int i = 0; i < 3; i++)
-        // {
-        // int sumaFila = 0;
-        // int sumaColumna = 0;
-        // for (int j = 0; j < matriz[i].Length; j++)
-        // {
-        // if (i < matriz[j].Length)
-        // {
-        // sumaFila += matriz[i][j];
-        // }
-        // if (j < matriz[i].Length && i < matriz[j].Length)
-        // {
-        // sumaColumna += matriz[i][j];
-        // }
-        // }
-        // Console.WriteLine("Suma de fila: " + sumaFila);
-        // Console.WriteLine("Suma de columna: " + sumaColumna);
-        // }
+        int[][] matriz = { // Declara la variable matriz y agrega valores
+            new int[] { 1, 1, 1 },
+            new int[] { 1 },
+            new int[] { 1, 1, 2 }
+        };
+        for (int i = 0; i < 3; i++) // Bucle para recorrer las filas de la matriz
+        {
+            int sumaFila = 0; // Guarda valores de las filas
+            int sumaColumna = 0; // Guardar valores de las columnas
+            for (int j = 0; j < matriz[i].Length; j++) // Bucle para recorrer los valores de la fila
+            {
+                System.Console.WriteLine(i < matriz[j].Length);
+                if (i < matriz[j].Length) // Si el indice de fila es menor a la longitud de la matriz con el indice de la columna
+                {
+                    sumaFila += matriz[i][j]; // Suma valor al sumaFila
+                }
+                if (j < matriz[i].Length && i < matriz[j].Length) // La condicion de antes + indice de la columna es menor a la longitud de la matriz con indice de fila
+                {
+                    sumaColumna += matriz[i][j]; // Suma valor al sumaFila
+                }
+            }
+            Console.WriteLine("Suma de fila: " + sumaFila);
+            Console.WriteLine("Suma de columna: " + sumaColumna); // Printa los valores
+        }
+        
+        // Un problema de este codigo es que si la fila tiene menor longitud a la columna, hay valores de la columna
+        // que se pierden porque el bucle no lo recorre.
+
+        // Otro problema es que al no cumplir la condicion "i < matriz[j].Length", no suma ni las filas ni columnas.
 
     }
 }
