@@ -245,14 +245,13 @@
             int sumaColumna = 0; // Guardar valores de las columnas
             for (int j = 0; j < matriz[i].Length; j++) // Bucle para recorrer los valores de la fila
             {
-                System.Console.WriteLine(i < matriz[j].Length);
                 if (i < matriz[j].Length) // Si el indice de fila es menor a la longitud de la matriz con el indice de la columna
                 {
                     sumaFila += matriz[i][j]; // Suma valor al sumaFila
                 }
-                if (j < matriz[i].Length && i < matriz[j].Length) // La condicion de antes + indice de la columna es menor a la longitud de la matriz con indice de fila
+                if (j < matriz[i].Length && i < matriz[j].Length)
                 {
-                    sumaColumna += matriz[i][j]; // Suma valor al sumaFila
+                    sumaColumna += matriz[i][j]; // Suma valor al sumaColumna
                 }
             }
             Console.WriteLine("Suma de fila: " + sumaFila);
@@ -263,6 +262,8 @@
         // que se pierden porque el bucle no lo recorre.
 
         // Otro problema es que al no cumplir la condicion "i < matriz[j].Length", no suma ni las filas ni columnas.
+
+        
 
     }
 }
