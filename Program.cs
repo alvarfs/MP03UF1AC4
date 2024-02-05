@@ -36,14 +36,12 @@
                 {
                     totalDisponibles += 1;
                 }
-                
             }
         }
 
         Console.WriteLine($"total vendidas: {totalVendidas}");
         Console.WriteLine($"total disponibles: {totalDisponibles}");
         System.Console.WriteLine();
-
 
         // 2. El software de un hotel tiene un sistema de reservas con una matriz:
 
@@ -166,7 +164,6 @@
             System.Console.WriteLine();
         } while (userSelect != 4);
         System.Console.WriteLine();
-        
     
         // 3. Una tienda de comestibles ha registrado las ventas de productos en diferentes
         // secciones de la tienda. La información se presenta en una matriz de la siguiente
@@ -206,11 +203,11 @@
         // siguiente manera:
 
         bool[,] asistencia = {
-        { true, false, true, true, false },
-        { true, true, true, true, true },
-        { false, false, true, true, false },
-        { true, true, true, false, true },
-        { true, false, true, false, true }
+            { true, false, true, true, false },
+            { true, true, true, true, true },
+            { false, false, true, true, false },
+            { true, true, true, false, true },
+            { true, false, true, false, true }
         };
 
         // Donde true indica que el estudiante asistió a la clase y false indica que el estudiante
